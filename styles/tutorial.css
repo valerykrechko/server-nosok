@@ -1,0 +1,208 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: play;
+    src: url('/fonts/Play.ttf') format(truetype);
+}
+
+body {
+    font-family: play;
+    color: #fff;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    padding-bottom: 30px;
+    background: linear-gradient(rgba(33,33,33,0.9), rgba(0,0,0,0.55)), url(/img/body.png) center/cover no-repeat;
+}
+.container {
+    margin: 0 auto;
+    max-width: 1400px;
+    padding: 20px 0 20px;
+    background: linear-gradient(rgba(33,33,33,0.25), rgba(0,0,0,0.55)), url(/img/body.png) center/cover no-repeat fixed;
+    border-radius: 10px;
+}
+.header {
+    padding: 0px 15px;
+    background-color: rgba(23, 23, 23, 0.582);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    line-height: 70px;
+    border: 1px solid rgb(32, 32, 32);
+    margin: auto;
+    h1{
+        color:rgb(255, 84, 32);
+    }
+}
+.header_h1:hover {
+    color: #ffffff;
+    cursor: crosshair;
+}
+
+.header__toggle {
+    font-size: 20px;
+    line-height: 70px;
+    cursor: pointer;
+    display: none;
+}
+
+#toggle {
+    display: none;
+}
+
+.nav {
+    display: flex;
+}
+.menu {
+    display: flex;
+    list-style-type: none;
+}
+.menu a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin: 0 10px;
+    padding: 10px;
+    border-radius: 5px;
+    line-height: 70px;
+    transition: all 0.2s ease-in;
+    font-size: 20px;
+}
+
+.menu a:hover {
+    background-color: rgba(60, 60, 60, 0.4);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.menu a:active {
+    background-color: transparent;
+    color: grey;
+}
+
+@media only screen and (max-width: 736px) {
+    .header {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0 15px;
+    }
+    .header__toggle {
+        display: block;
+        cursor: pointer;
+    }
+    .nav {
+        width: 100%;
+    }
+    .menu {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        position: fixed;
+        left: -100%;
+        transition: all .5s ease-in;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    .menu a {
+        display: block;
+        border-bottom: 1px solid grey;
+        margin: 0;
+        color: #fff;
+    }
+    .menu a:hover {
+        background-color: rgba(185, 185, 185, 0.4);
+        color: #fff;
+    }
+    .menu a:active {
+        background-color: transparent;
+        color: gray;
+    }
+    #toggle:checked~.menu {
+        left: 0;
+    }
+}
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    padding: 2em;
+}
+.playground__header {
+    color: #ffffff;
+    flex: 0 auto;
+    margin-bottom: 1em;
+}
+
+.playground {
+    padding: 2em;
+    border: 2px solid #555;
+    border-radius: 5px;
+    flex: 1;
+}
+
+/* General styles end */
+
+/* Tabs visuals start */
+
+.tabs {
+    margin-bottom: 2em;
+}
+
+.tabs__headers {
+    border-bottom: 2px solid #555;
+    display: flex;
+    unicode-bidi: normal;
+}
+
+.tabs__header {
+
+    padding: 1em;
+    border: 1px solid #555;
+    user-select: none;
+    cursor: pointer;
+}
+
+.tabs__contents {
+    padding: 2em;
+    border: 1px solid #555;
+    border-radius: 5px;
+    video {
+        width: 800px;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+}
+
+/* Tabs visuals end */
+
+/* Tabs functional start */
+.tabs__hidden-state-input {
+    display: none;
+}
+
+.tabs:has(.tabs__header--1 input:checked) .tabs__header--1, 
+.tabs:has(.tabs__header--2 input:checked) .tabs__header--2, 
+.tabs:has(.tabs__header--3 input:checked) .tabs__header--3, 
+.tabs:has(.tabs__header--4 input:checked) .tabs__header--4, 
+.tabs:has(.tabs__header--5 input:checked) .tabs__header--5 {
+    font-weight: bold;
+    background-color: rgba(75, 75, 75, 0.816);
+    color: rgb(255, 84, 32);
+}
+.tabs__content {
+    display: none;
+}
+
+.tabs:has(.tabs__header--1 input:checked) .tabs__content--1, 
+.tabs:has(.tabs__header--2 input:checked) .tabs__content--2, 
+.tabs:has(.tabs__header--3 input:checked) .tabs__content--3,
+.tabs:has(.tabs__header--4 input:checked) .tabs__content--4, 
+.tabs:has(.tabs__header--5 input:checked) .tabs__content--5 { 
+    display: block;
+}
