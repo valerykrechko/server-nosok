@@ -243,3 +243,86 @@ label {
         object-fit: cover;
     }
 }
+
+/* tutorial */
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    padding: 2em;
+}
+.playground__header {
+    color: #ffffff;
+    flex: 0 auto;
+    margin-bottom: 1em;
+}
+
+.playground {
+    padding: 2em;
+    border: 2px solid #555;
+    border-radius: 5px;
+    flex: 1;
+}
+
+/* General styles end */
+
+/* Tabs visuals start */
+
+.tabs {
+    margin-bottom: 2em;
+}
+
+.tabs__headers {
+    border-bottom: 2px solid #555;
+    display: flex;
+    unicode-bidi: normal;
+}
+
+.tabs__header {
+
+    padding: 1em;
+    border: 1px solid #555;
+    user-select: none;
+    cursor: pointer;
+}
+
+.tabs__contents {
+    padding: 2em;
+    border: 1px solid #555;
+    border-radius: 5px;
+    video {
+        width: 800px;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+}
+
+/* Tabs visuals end */
+
+/* Tabs functional start */
+.tabs__hidden-state-input {
+    display: none;
+}
+
+.tabs:has(.tabs__header--1 input:checked) .tabs__header--1, 
+.tabs:has(.tabs__header--2 input:checked) .tabs__header--2, 
+.tabs:has(.tabs__header--3 input:checked) .tabs__header--3, 
+.tabs:has(.tabs__header--4 input:checked) .tabs__header--4, 
+.tabs:has(.tabs__header--5 input:checked) .tabs__header--5 {
+    font-weight: bold;
+    background-color: rgba(75, 75, 75, 0.816);
+    color: rgb(255, 84, 32);
+}
+.tabs__content {
+    display: none;
+}
+
+.tabs:has(.tabs__header--1 input:checked) .tabs__content--1, 
+.tabs:has(.tabs__header--2 input:checked) .tabs__content--2, 
+.tabs:has(.tabs__header--3 input:checked) .tabs__content--3,
+.tabs:has(.tabs__header--4 input:checked) .tabs__content--4, 
+.tabs:has(.tabs__header--5 input:checked) .tabs__content--5 { 
+    display: block;
+}
