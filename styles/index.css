@@ -161,6 +161,8 @@ linear-gradient(rgba(33,33,33,0.25), rgba(0,0,0,0.55)), */
     font-size: 20px;
 }
 .hero__startgame {
+    display: flex;
+    align-items: center;
     background-color: rgb(255, 84, 32);
     color: #fff;
     padding: 10px;
