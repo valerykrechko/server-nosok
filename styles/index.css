@@ -17,14 +17,14 @@ body {
     text-rendering: optimizeSpeed;
     line-height: 1.5;
     padding-bottom: 30px;
-    background: linear-gradient(rgba(33,33,33,0.9), rgba(0,0,0,0.55)), url(/img/body.png) center/cover no-repeat;
+    background: linear-gradient(rgba(33,33,33,0.9), rgba(0,0,0,0.55)), url(/img/body.webp) center/cover no-repeat;
 }
 .container {
     margin: 0 auto;
     max-width: 1400px;
     text-align: center;
     padding: 20px 0 20px;
-    background: linear-gradient(rgba(33,33,33,0.25), rgba(0,0,0,0.55)), url(/img/body.png) center/cover no-repeat fixed;
+    background: linear-gradient(rgba(33,33,33,0.25), rgba(0,0,0,0.55)), url(/img/body.webp) center/cover no-repeat fixed;
     border-radius: 10px;
 }
 /* linear-gradient(rgba(33,33,33,0.9), rgba(0,0,0,0.55)),
