@@ -130,7 +130,7 @@ linear-gradient(rgba(33,33,33,0.25), rgba(0,0,0,0.55)), */
         left: 0;
     }
 }
-.hero {
+.hero__index {
     max-width: 800px;
     max-height: 100%;
     margin: 0 auto;
@@ -246,7 +246,7 @@ linear-gradient(rgba(33,33,33,0.25), rgba(0,0,0,0.55)), */
 
 /* tutorial */
 
-.hero {
+.hero__tutorial {
     height: 100vh;
     display: flex;
     flex-direction: column;
