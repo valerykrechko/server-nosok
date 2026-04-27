@@ -48,7 +48,7 @@ linear-gradient(rgba(33,33,33,0.25), rgba(0,0,0,0.55)), */
     cursor: crosshair;
 }
 
-label {
+.toggle__label {
     font-size: 20px;
     line-height: 70px;
     cursor: pointer;
@@ -95,7 +95,7 @@ label {
         justify-content: space-between;
         padding: 0 15px;
     }
-    label {
+    .toggle__label {
         display: block;
         cursor: pointer;
     }
