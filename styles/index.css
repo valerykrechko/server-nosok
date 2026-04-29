@@ -53,7 +53,7 @@ body {
     max-width: 1400px;
     text-align: center;
     padding: 20px 0 20px;
-    background:  url(/img/body.webp) center/cover no-repeat fixed;
+    background:  url(/img/body.webp) center/cover no-repeat fixed; 
     border-radius: 10px;
 }
 /* linear-gradient(rgba(33,33,33,0.9), rgba(0,0,0,0.55)),
@@ -180,7 +180,6 @@ linear-gradient(rgba(33,33,33,0.25), rgba(0,0,0,0.55)), */
 .hero__logo {
     width: 100%;
     object-fit: cover;
-    height: 450px;
     width: 450px;
 }
 .hero__chapter {
